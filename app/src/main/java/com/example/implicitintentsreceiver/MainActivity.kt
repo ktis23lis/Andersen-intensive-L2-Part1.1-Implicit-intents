@@ -9,6 +9,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val intent = intent
+        val uri = intent.data
+        if (uri != null) {
+            val uri_string = "URI: $uri"
+            val textView = findViewById<TextView>(R.id.text_uri_message)
+            textView.text = uri_string
+        }
 
     }
 }
